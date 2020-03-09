@@ -1,0 +1,12 @@
+version: "3"
+services:
+  caddy:
+    image: pengchujin/v2ray_ws:0.08
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "./.caddy:/root/.caddy"
+      - "./config/Caddyfile:/etc/Caddyfile"
+      - "./config/config.json:/etc/v2ray/config.json"
+      - "./config/caddy.sh:/caddy.sh"

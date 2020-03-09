@@ -1,0 +1,8 @@
+version: "3"
+services:
+  v2ray:
+    image: v2ray/official
+    ports:
+        - "v2ray_port:v2ray_port/udp"
+    volumes:
+      - "./config/config.json:/etc/v2ray/config.json"
